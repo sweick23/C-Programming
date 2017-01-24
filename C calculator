@@ -1,0 +1,160 @@
+/* File name: Calculator
+ * Prompt the user using a menu of options
+ * after the user chooses an option
+ * prompt user for an integer for the left side of the equation
+ * then prompt the user for an integer for the right side
+ * use the two sides of the equation and do the math
+ * and give the user the answer 
+ */
+ 
+#include <cs50.h>
+#include <stdio.h>
+
+int n = 0;
+int j = 0; 
+int m = 0; 
+
+int main(void)
+{
+// This is the menu of options
+    printf("       What would you like to do?\n");
+    printf("       1: Add\n");
+    printf("       2: Subtact\n");
+    printf("       3: Multiply\n");
+    printf("       4: Divide\n");
+    printf("       What option would you like to use:  ");
+    m = GetInt();
+    
+// option 1 addition
+    if (m == 1)
+    {
+        printf("\n");
+        printf("        You chose Addition!\n");
+        printf("\n");
+        do
+        {
+            printf("      Type in an integer greater than 0: ");
+            n = GetInt();
+            printf("\n");
+        }
+        while (n < 0);
+        {
+            do
+            {
+                printf("       Type another integer: ");
+                j = GetInt();
+                printf("\n");
+            }
+            while (j < 0);
+            {
+                float c = n + j;
+                printf("      Your answer is: ");
+                printf("%1.0f", c);
+                printf("\n");
+                printf("\n");
+            }
+                
+                
+    }
+    }
+//option 2 subtraction
+     else if (m == 2)
+    {
+        printf("\n");
+        printf("       You chose Subtraction!\n");
+        printf("\n");
+        do
+        {
+            printf("       Type in an integer greater than 0: ");
+            n = GetInt();
+            printf("\n");
+        }
+        while (n < 0);
+        {
+            do
+            {
+                printf("       Type another integer: ");
+                j = GetInt();
+                printf("\n");
+            }
+            while (j < 0);
+            {
+                float c = n - j;
+                printf("       Your answer is: ");
+                printf("%1.0f", c);
+                printf("\n");
+                printf("\n");
+            }
+                
+                
+    }
+    }
+// option 3 multiplication
+     else if (m == 3)
+    {
+        printf("\n");
+        printf("       You chose Multiplication!\n");
+        printf("\n");
+        do
+        {
+            printf("       Type in an integer greater than 0: ");
+            n = GetInt();
+            printf("\n");
+        }
+        while (n < 0);
+        {
+            do
+            {
+                printf("       Type another integer: ");
+                j = GetInt();
+                printf("\n");
+            }
+            while (j < 0);
+            {
+                float c = n * j;
+                printf("       Your answer is: ");
+                printf("%1.0f", c);
+                printf("\n");
+                printf("\n");
+            }
+                
+                
+    }
+    }
+// option 4 division
+    else  if (m == 4)
+    {
+        printf("\n");
+        printf("       You chose Division!\n");
+        printf("\n");
+        do
+        {
+            printf("       Type in an integer greater than 0: ");
+            n = GetInt();
+            printf("\n");
+        }
+        while (n < 0);
+        {
+            do
+            {
+                printf("       Type another integer: ");
+                j = GetInt();
+                printf("\n");
+            }
+            while (j < 0);
+            {
+                float c = n / j;
+                printf("       Your answer is: ");
+                printf("%1.0f", c);
+                printf("\n");
+                printf("\n");
+            }
+                
+                
+    }
+    }
+    else if(n <= 5)
+    {
+        printf("       Rerun program and choose an option above.\n");
+    }
+}
